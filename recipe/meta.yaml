@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: charls
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/team-charls/charls/archive/{{ version }}.tar.gz
-  sha256: 528c6a3cc168a44e73f2890d8f4a35104a54d752eba3d6a643f050b72dd67cfa
+  sha256: 0d6af23928ba4f1205b1b74754111e5f5f6b47d192199ffa7a70d14b824ad97d
   patches:
     - remove_dll_import_definitions.patch
 
