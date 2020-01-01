@@ -11,6 +11,9 @@ cmake -LAH -G "Ninja"                                                     ^
     -DOPENCV_BIN_INSTALL_PATH=bin                                         ^
     -DOPENCV_LIB_INSTALL_PATH=lib                                         ^
     -DBUILD_SHARED_LIBS=1                                                 ^
+    -DCHARLS_BUILD_TESTS=1                                                ^
+    -DCHARLS_BUILD_SAMPLES=0                                              ^
+    -DCHARLS_INSTALL=1                                                    ^
     ..
 
 if errorlevel 1 exit 1

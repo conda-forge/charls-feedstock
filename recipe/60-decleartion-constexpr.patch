@@ -1,0 +1,46 @@
+diff --git a/src/scan.h b/src/scan.h
+index 8b943a6..e970622 100644
+--- a/src/scan.h
++++ b/src/scan.h
+@@ -77,13 +77,13 @@ inline int32_t GetPredictedValue(int32_t Ra, int32_t Rb, int32_t Rc) noexcept
+ 
+ #endif
+ 
+-constexpr int32_t UnMapErrVal(int32_t mappedError) noexcept
++inline int32_t UnMapErrVal(int32_t mappedError) noexcept
+ {
+     const int32_t sign = mappedError << (int32_t_bit_count - 1) >> (int32_t_bit_count - 1);
+     return sign ^ (mappedError >> 1);
+ }
+ 
+-constexpr int32_t GetMappedErrVal(int32_t errorValue) noexcept
++inline int32_t GetMappedErrVal(int32_t errorValue) noexcept
+ {
+     const int32_t mappedError = (errorValue >> (int32_t_bit_count - 2)) ^ (2 * errorValue);
+     return mappedError;
+diff --git a/src/util.h b/src/util.h
+index f12e013..2e63e5b 100644
+--- a/src/util.h
++++ b/src/util.h
+@@ -116,7 +116,7 @@ inline void push_back(std::vector<uint8_t>& values, uint32_t value)
+ }
+ 
+ 
+-constexpr int32_t log_2(int32_t n) noexcept
++inline int32_t log_2(int32_t n) noexcept
+ {
+     int32_t x = 0;
+     while (n > (1 << x))
+diff --git a/test/portable_anymap_file.h b/test/portable_anymap_file.h
+index 556b417..96da122 100644
+--- a/test/portable_anymap_file.h
++++ b/test/portable_anymap_file.h
+@@ -101,7 +101,7 @@ class portable_anymap_file final
+         return result;
+     }
+ 
+-    static constexpr int32_t log_2(int32_t n) noexcept
++    static inline int32_t log_2(int32_t n) noexcept
+     {
+         int32_t x = 0;
+         while (n > (1 << x))
