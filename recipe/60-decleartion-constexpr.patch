@@ -31,3 +31,16 @@ index f12e013..2e63e5b 100644
  {
      int32_t x = 0;
      while (n > (1 << x))
+diff --git a/test/portable_anymap_file.h b/test/portable_anymap_file.h
+index 556b417..96da122 100644
+--- a/test/portable_anymap_file.h
++++ b/test/portable_anymap_file.h
+@@ -101,7 +101,7 @@ class portable_anymap_file final
+         return result;
+     }
+ 
+-    static constexpr int32_t log_2(int32_t n) noexcept
++    static inline int32_t log_2(int32_t n) noexcept
+     {
+         int32_t x = 0;
+         while (n > (1 << x))
