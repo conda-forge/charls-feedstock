@@ -9,7 +9,8 @@ source:
   sha256: 0d6af23928ba4f1205b1b74754111e5f5f6b47d192199ffa7a70d14b824ad97d
   patches:
     # https://github.com/team-charls/charls/issues/60
-    - 60-decleartion-constexpr.patch
+    # Current windows compiler doesn't seem to support extended constexpr
+    - 60-decleartion-constexpr.patch  # [win]
 
 build:
   skip: True  # [win and vc<14]
