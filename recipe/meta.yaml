@@ -7,10 +7,6 @@ package:
 source:
   url: https://github.com/team-charls/charls/archive/{{ version }}.tar.gz
   sha256: e1d7dd70cd9d6d46de5abbf22278dc8169707995a21e8bf705f5746c04c76891
-  patches:
-    # https://github.com/team-charls/charls/issues/60
-    # Current windows compiler doesn't seem to support extended constexpr
-    - 60-decleartion-constexpr.patch  # [win]
 
 build:
   skip: true  # [win and vc<14]
