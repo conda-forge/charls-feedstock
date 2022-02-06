@@ -10,7 +10,7 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 0
+  number: 1
   run_exports:
     # Seems like things change with minor revision (2.0 - 2.1) had many file
     # name changes
