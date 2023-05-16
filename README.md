@@ -1,11 +1,11 @@
-About charls
-============
+About charls-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/charls-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/team-charls/charls
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/charls-feedstock/blob/main/LICENSE.txt)
 
 Summary: CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-lossless image compression and decompression. JPEG-LS is a low-complexity image compression standard that matches JPEG 2000 compression ratios.
 
