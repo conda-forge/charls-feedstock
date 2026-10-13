@@ -9,7 +9,6 @@ source:
   sha256: b55c742ef96b5e9d63f813a75d0ba29944302abb5a6ab59756ad61fa017b1dd3
 
 build:
-  skip: true  # [win and vc<14]
   number: 0
   run_exports:
     # Seems like things change with minor revision (2.0 - 2.1) had many file
@@ -19,7 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make   # [not win]
